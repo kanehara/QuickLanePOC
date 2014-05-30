@@ -16,14 +16,6 @@
 
 @implementation SettingsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
 
 - (void)viewDidLoad
 {
@@ -44,8 +36,12 @@
     
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
-    
     [self.view addSubview:GD.quickLaneImageView];
+    
+    // Set vehicles button
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
+    [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
 }
 
 - (void)didReceiveMemoryWarning
@@ -99,15 +95,8 @@
     return cell;
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
+-(IBAction)pressedOnMyVehicles:(id)sender {
+    [self performSegueWithIdentifier:@"myVehiclesSegue" sender:self];
 }
-*/
 
 @end

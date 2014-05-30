@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		5720E208192B96AB00B08D92 /* MyLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5720E207192B96AB00B08D92 /* MyLocationsTableViewController.m */; };
+		5789B92319390EE6000BC039 /* NewVehicleEntryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5789B92219390EE6000BC039 /* NewVehicleEntryViewController.m */; };
 		57928B0C1935046F007685AA /* MyVehicleInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57928B0B1935046F007685AA /* MyVehicleInfoViewController.m */; };
 		57928B1519365830007685AA /* MyMaintenanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57928B1419365830007685AA /* MyMaintenanceViewController.m */; };
 		57928B1B19365C33007685AA /* MyMaintenanceChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57928B1A19365C33007685AA /* MyMaintenanceChildViewController.m */; };
@@ -69,6 +70,8 @@
 /* Begin PBXFileReference section */
 		5720E206192B96AB00B08D92 /* MyLocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLocationsTableViewController.h; path = "Service Controllers/MyLocationsViewController/MyLocationsTableViewController.h"; sourceTree = "<group>"; };
 		5720E207192B96AB00B08D92 /* MyLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLocationsTableViewController.m; path = "Service Controllers/MyLocationsViewController/MyLocationsTableViewController.m"; sourceTree = "<group>"; };
+		5789B92119390EE6000BC039 /* NewVehicleEntryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = NewVehicleEntryViewController.h; path = "New Vehicle Entry Controller/NewVehicleEntryViewController.h"; sourceTree = "<group>"; };
+		5789B92219390EE6000BC039 /* NewVehicleEntryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = NewVehicleEntryViewController.m; path = "New Vehicle Entry Controller/NewVehicleEntryViewController.m"; sourceTree = "<group>"; };
 		57928B0A1935046F007685AA /* MyVehicleInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyVehicleInfoViewController.h; path = "My Info Controllers/MyVehicleInfoViewController.h"; sourceTree = "<group>"; };
 		57928B0B1935046F007685AA /* MyVehicleInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyVehicleInfoViewController.m; path = "My Info Controllers/MyVehicleInfoViewController.m"; sourceTree = "<group>"; };
 		57928B1319365830007685AA /* MyMaintenanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMaintenanceViewController.h; path = "My Info Controllers/MyMaintenanceViewController.h"; sourceTree = "<group>"; };
@@ -182,6 +185,15 @@
 				57EEB4AC192A4D01004A426F /* SidebarViewController.m */,
 			);
 			name = "SidebarViewController (Rear)";
+			sourceTree = "<group>";
+		};
+		5789B92419390EEF000BC039 /* NewVehicleEntryViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5789B92119390EE6000BC039 /* NewVehicleEntryViewController.h */,
+				5789B92219390EE6000BC039 /* NewVehicleEntryViewController.m */,
+			);
+			name = NewVehicleEntryViewController;
 			sourceTree = "<group>";
 		};
 		57AAB54E192BA8770096982F /* Images */ = {
@@ -298,6 +310,7 @@
 				57EEB45119244D83004A426F /* AppDelegate.m */,
 				57AAB54F192BAAA00096982F /* MyVehiclesViewController.h */,
 				57AAB550192BAAA00096982F /* MyVehiclesViewController.m */,
+				5789B92419390EEF000BC039 /* NewVehicleEntryViewController */,
 				57AAB57C192BD7400096982F /* My Info Controllers */,
 				57EEB48D19264CCD004A426F /* Service Controllers */,
 				57AAB589192BE8830096982F /* More Controllers */,
@@ -477,6 +490,7 @@
 			files = (
 				57AAB595192CF5470096982F /* GlobalData.m in Sources */,
 				57EEB45219244D83004A426F /* AppDelegate.m in Sources */,
+				5789B92319390EE6000BC039 /* NewVehicleEntryViewController.m in Sources */,
 				57AAB5A1192E369C0096982F /* MyFavoriteLocationViewController.m in Sources */,
 				57AAB573192BCC180096982F /* GasViewController.m in Sources */,
 				57AD5B101937781800805447 /* RoadsideAssistanceViewController.m in Sources */,

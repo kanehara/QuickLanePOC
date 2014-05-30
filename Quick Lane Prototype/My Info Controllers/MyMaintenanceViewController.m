@@ -34,14 +34,12 @@
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
     [self.view addSubview:GD.quickLaneImageView];
+    [self.view addSubview:GD.selectedVehicleLabel];
     
     // Set vehicles button
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont systemFontOfSize:10], NSFontAttributeName, nil];
+                                [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
     [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
-    
-    // Set selected vehicle label
-    _selectedVehicle.text = GD.selectedVehicle;
     
     // Page view controller data config
     self.milestones = @[@"80,000", @"100,000", @"120,000"];
@@ -135,7 +133,8 @@
 }
 
 - (MyMaintenanceChildViewController *) viewControllerAtIndex:(NSUInteger)index {
-    if (([self.milestones count] == 0) || (index >= [self.milestones count])) {
+    NSUInteger numControllers = [self.milestones count];
+    if ((numControllers == 0) || (index >= numControllers)) {
         return nil;
     }
     

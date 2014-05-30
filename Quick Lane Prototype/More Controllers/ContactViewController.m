@@ -40,25 +40,17 @@
     
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
-    
     [self.view addSubview:GD.quickLaneImageView];
+    
+    // Set vehicles button
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
+    [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
 }
 
-- (void)didReceiveMemoryWarning
-{
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(IBAction)pressedOnMyVehicles:(id)sender {
+    [self performSegueWithIdentifier:@"myVehiclesSegue" sender:self];
 }
 
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender
-{
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end

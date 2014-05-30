@@ -41,7 +41,7 @@
     
     // Set vehicles button
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont systemFontOfSize:10], NSFontAttributeName, nil];
+                                [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
     [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
 }
 

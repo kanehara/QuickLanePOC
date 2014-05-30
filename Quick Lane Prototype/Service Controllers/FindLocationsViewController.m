@@ -37,6 +37,15 @@
     
     // Set gesture
     [self.view addGestureRecognizer:self.revealViewController.panGestureRecognizer];
+    
+    // Set vehicles button
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
+    [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
+}
+
+-(IBAction)pressedOnMyVehicles:(id)sender {
+    [self performSegueWithIdentifier:@"myVehiclesSegue" sender:self];
 }
 
 @end

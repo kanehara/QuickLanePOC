@@ -16,8 +16,6 @@
 
 -(IBAction)pressedOnMyVehicles:(id)sender;
 
-@property (nonatomic, weak) IBOutlet UILabel *selectedVehicle;
-
 @property (nonatomic, weak) IBOutlet UIView *containerView;
 
 @property (strong, nonatomic) UIPageViewController *pageController;

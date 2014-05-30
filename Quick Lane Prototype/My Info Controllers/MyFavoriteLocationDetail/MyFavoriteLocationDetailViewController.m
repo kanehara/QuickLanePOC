@@ -30,9 +30,7 @@
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
     [self.view addSubview:GD.quickLaneImageView];
-    
-    // Set selected vehicle label
-    _selectedVehicle.text = GD.selectedVehicle;
+    [self.view addSubview:GD.selectedVehicleLabel];
 
 }
 
@@ -69,6 +67,10 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     
     return cell;
+}
+
+-(NSString*) tableView:(UITableView *)tableView titleForHeaderInSection:(NSInteger)section {
+    return @"Service History";
 }
 
 

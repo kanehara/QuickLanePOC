@@ -15,6 +15,4 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *myVehiclesButton;
 -(IBAction)pressedOnMyVehicles:(id)sender;
 
-@property (nonatomic, weak) IBOutlet UILabel *selectedVehicle;
-
 @end

@@ -13,8 +13,9 @@
 
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
-@property (weak, nonatomic) IBOutlet UILabel *selectedVehicleLabel;
-
 @property (weak, nonatomic) GlobalData *GD;
+
+@property (nonatomic, strong) IBOutlet UIButton *addVehicleEntryButton;
+-(IBAction)pressedOnNewVehicleEnryButton:(id)sender;
 
 @end

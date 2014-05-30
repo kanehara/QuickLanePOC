@@ -29,11 +29,7 @@
 {
     [super viewDidLoad];
     
-    // Uncomment the following line to preserve selection between presentations.
-    // self.clearsSelectionOnViewWillAppear = NO;
-    
-    // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
-    // self.navigationItem.rightBarButtonItem = self.editButtonItem;
+    self.automaticallyAdjustsScrollViewInsets = NO;
     
     // Button color config
     _sideBarButton.tintColor = [UIColor colorWithWhite:.3 alpha:1];
@@ -47,8 +43,8 @@
     
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
-    
     [self.tableView addSubview:GD.quickLaneImageView];
+    [self.tableView addSubview:GD.selectedVehicleLabel];
 }
 
 - (void)didReceiveMemoryWarning

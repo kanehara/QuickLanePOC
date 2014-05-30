@@ -12,8 +12,6 @@
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
-@property (weak, nonatomic) IBOutlet UILabel *selectedVehicle;
-
 @property (weak, nonatomic) IBOutlet UITableView *tableView;
 
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *myVehiclesButton;

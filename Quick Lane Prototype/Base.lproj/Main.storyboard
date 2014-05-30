@@ -54,7 +54,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView opaque="NO" clipsSubviews="YES" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="55" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="PeG-O4-3Xh">
-                                <rect key="frame" x="0.0" y="256" width="320" height="290"/>
+                                <rect key="frame" x="0.0" y="180" width="320" height="290"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -126,28 +126,16 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PfV-eC-bA2">
-                                <rect key="frame" x="278" y="226" width="22" height="22"/>
+                                <rect key="frame" x="278" y="150" width="22" height="22"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <state key="normal">
-                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
-                                </state>
+                                <connections>
+                                    <action selector="pressedOnNewVehicleEnryButton:" destination="4N5-jj-1eg" eventType="touchUpInside" id="BzI-WP-OLj"/>
+                                </connections>
                             </button>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Choose a Vehicle" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ild-Ot-g3V">
-                                <rect key="frame" x="20" y="227" width="250" height="21"/>
+                                <rect key="frame" x="20" y="151" width="250" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Selected Vehicle:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="I0n-SW-IPC">
-                                <rect key="frame" x="93" y="150" width="135" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="VEHICLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ha5-CU-HNT">
-                                <rect key="frame" x="20" y="179" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
@@ -155,13 +143,82 @@
                     </view>
                     <navigationItem key="navigationItem" id="atT-iX-YQR"/>
                     <connections>
-                        <outlet property="selectedVehicleLabel" destination="ha5-CU-HNT" id="dy2-UD-RXR"/>
+                        <outlet property="addVehicleEntryButton" destination="PfV-eC-bA2" id="MrV-1k-M02"/>
                         <outlet property="tableView" destination="PeG-O4-3Xh" id="u9m-Pt-hmp"/>
+                        <segue destination="QYu-51-1Gy" kind="push" identifier="newVehicleEntrySegue" id="4Ex-QN-lBc"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="1vC-zr-g3w" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2799" y="-2916"/>
+            <point key="canvasLocation" x="2903" y="-3044"/>
+        </scene>
+        <!--New Vehicle Entry View Controller-->
+        <scene sceneID="4SB-lR-eP6">
+            <objects>
+                <viewController id="QYu-51-1Gy" customClass="NewVehicleEntryViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Cp3-oG-8OH"/>
+                        <viewControllerLayoutGuide type="bottom" id="FkH-xf-u0J"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="lHa-nU-tfB">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Make" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zn6-1t-skN">
+                                <rect key="frame" x="94" y="193" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="mmt-dP-8GE">
+                                <rect key="frame" x="94" y="231" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Model Year" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XPx-Vw-hiJ">
+                                <rect key="frame" x="94" y="155" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Submodel" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="56M-0I-gwV">
+                                <rect key="frame" x="94" y="269" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Trim (optional)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="MPo-XR-NDb">
+                                <rect key="frame" x="94" y="307" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Condition (optional)" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ugl-7o-pne">
+                                <rect key="frame" x="94" y="345" width="133" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SWy-eK-gR3">
+                                <rect key="frame" x="136" y="383" width="49" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Submit">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <pickerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="len-8T-hdA">
+                                <rect key="frame" x="0.0" y="345" width="320" height="162"/>
+                                <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMaxY="YES"/>
+                            </pickerView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    </view>
+                    <navigationItem key="navigationItem" id="zOx-Cy-fKa"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dcI-B4-EGK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3628" y="-3044"/>
         </scene>
         <!--Sidebar View Controller-->
         <scene sceneID="P8a-Kf-LYu">
@@ -187,7 +244,7 @@
                         </connections>
                     </tableView>
                     <connections>
-                        <segue destination="fNJ-HZ-hpd" kind="custom" identifier="findTireSegue" customClass="SWRevealViewControllerSegue" id="XBW-X2-BAA"/>
+                        <segue destination="fNJ-HZ-hpd" kind="custom" identifier="searchForTiresSegue" customClass="SWRevealViewControllerSegue" id="XBW-X2-BAA"/>
                         <segue destination="RUT-SI-x58" kind="custom" identifier="rebateClaimSegue" customClass="SWRevealViewControllerSegue" id="615-SE-45p"/>
                         <segue destination="T3n-8a-fGr" kind="custom" identifier="gasSegue" customClass="SWRevealViewControllerSegue" id="hZZ-V5-6zO"/>
                         <segue destination="bRm-3D-eFA" kind="custom" identifier="storeLocatorSegue" customClass="SWRevealViewControllerSegue" id="ECf-Vi-vwk"/>
@@ -219,7 +276,7 @@
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="GoogleMap.png" translatesAutoresizingMaskIntoConstraints="NO" id="Coa-6L-2Q8">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                                <rect key="frame" x="0.0" y="108" width="320" height="460"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                             <searchBar contentMode="redraw" fixedFrame="YES" placeholder="Search by Address" translatesAutoresizingMaskIntoConstraints="NO" id="XZP-fc-5B7">
@@ -235,11 +292,25 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem image="menu" id="HaV-i6-cbf"/>
+                        <barButtonItem title="My Vehicles" id="Cis-By-HlZ">
+                            <connections>
+                                <action selector="pressedOnMyVehicles:" destination="bRm-3D-eFA" id="AqL-7l-h42"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="uTF-fs-ajt">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="HaV-i6-cbf"/>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="HaV-i6-cbf" id="UWg-1A-RAy"/>
+                            <outlet property="rightBarButtonItem" destination="Cis-By-HlZ" id="VVh-t3-DXG"/>
+                        </connections>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="myVehiclesButton" destination="Cis-By-HlZ" id="b0h-8H-BXO"/>
                         <outlet property="sideBarButton" destination="HaV-i6-cbf" id="A9Z-9N-2vy"/>
+                        <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="UgB-rv-TTH"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="AdE-vh-OBr" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -264,14 +335,8 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
                                 <nil key="highlightedColor"/>
                             </label>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECTED VEHICLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="k9E-mw-Dhj">
-                                <rect key="frame" x="20" y="178" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="190" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Q3E-qj-dej">
-                                <rect key="frame" x="20" y="209" width="280" height="339"/>
+                                <rect key="frame" x="20" y="175" width="280" height="393"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -299,7 +364,7 @@
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9Uz-0z-2GT">
-                                <rect key="frame" x="87" y="143" width="146" height="27"/>
+                                <rect key="frame" x="87" y="140" width="146" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="12"/>
                                 <state key="normal" title="Search by Tire Specs">
@@ -310,7 +375,11 @@
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
-                        <barButtonItem title="My Vehicles" id="ysC-Pg-aQ4"/>
+                        <barButtonItem title="My Vehicles" id="ysC-Pg-aQ4">
+                            <connections>
+                                <action selector="pressedOnMyVehicles:" destination="fNJ-HZ-hpd" id="EpU-6a-hjw"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem image="menu" id="Lou-An-wLz"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" id="Ze1-9F-KXr">
@@ -322,7 +391,6 @@
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myVehiclesButton" destination="ysC-Pg-aQ4" id="Eqa-Uf-7cz"/>
-                        <outlet property="selectedVehicle" destination="k9E-mw-Dhj" id="Uph-lv-Irx"/>
                         <outlet property="sideBarButton" destination="Lou-An-wLz" id="I7b-IB-KrO"/>
                         <outlet property="tableView" destination="Q3E-qj-dej" id="Ypq-6I-a1o"/>
                         <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="Mf6-au-dCd"/>
@@ -344,14 +412,20 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rebate claim number" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-nq-anM">
-                                <rect key="frame" x="42" y="176" width="186" height="30"/>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Rebate Promo Code" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HS6-nq-anM">
+                                <rect key="frame" x="67" y="346" width="186" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Purchase Date" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="eMW-Ki-ZxB">
+                                <rect key="frame" x="67" y="384" width="186" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nM6-mr-ORD">
-                                <rect key="frame" x="236" y="176" width="49" height="30"/>
+                                <rect key="frame" x="136" y="422" width="49" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <state key="normal" title="Submit">
@@ -359,26 +433,55 @@
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8gf-Mf-cZe">
-                                <rect key="frame" x="92" y="269" width="136" height="30"/>
+                                <rect key="frame" x="116" y="452" width="88" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <state key="normal" title="Check Claim Status">
+                                <state key="normal" title="Track a Claim">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="l0c-Kh-Vd8">
+                                <rect key="frame" x="20" y="199" width="280" height="41"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="24"/>
+                                <state key="normal" title="Take Picture of Receipt">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Enter Manually:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9LZ-li-SGd">
+                                <rect key="frame" x="109" y="317" width="119" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                     </view>
+                    <toolbarItems>
+                        <barButtonItem image="menu" id="sVc-BY-gsC"/>
+                        <barButtonItem title="My Vehicles" id="mWR-h7-WdB">
+                            <connections>
+                                <action selector="pressedOnMyVehicles:" destination="RUT-SI-x58" id="sJH-r9-K7M"/>
+                            </connections>
+                        </barButtonItem>
+                    </toolbarItems>
                     <navigationItem key="navigationItem" id="kXH-VE-l6t">
-                        <barButtonItem key="leftBarButtonItem" image="menu" id="sVc-BY-gsC"/>
+                        <connections>
+                            <outlet property="leftBarButtonItem" destination="sVc-BY-gsC" id="S1z-6T-w5W"/>
+                            <outlet property="rightBarButtonItem" destination="mWR-h7-WdB" id="bCK-fo-P6H"/>
+                        </connections>
                     </navigationItem>
+                    <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="myVehiclesButton" destination="mWR-h7-WdB" id="874-82-ToN"/>
                         <outlet property="sideBarButton" destination="sVc-BY-gsC" id="cHd-kw-f1w"/>
+                        <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="30a-Go-5TY"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9um-pQ-k2H" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1445" y="-1768"/>
+            <point key="canvasLocation" x="1427" y="-1786"/>
         </scene>
         <!--Gas View Controller - Title-->
         <scene sceneID="fC3-iN-lxe">
@@ -694,15 +797,23 @@ Winterfelt</string>
                     </tableView>
                     <toolbarItems>
                         <barButtonItem image="menu" id="rVu-A0-i5j"/>
+                        <barButtonItem title="My Vehicles" id="nO0-I0-zJP">
+                            <connections>
+                                <action selector="pressedOnMyVehicles:" destination="T3n-8a-fGr" id="2FR-TU-Wy5"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="lLE-9m-4a7">
                         <connections>
                             <outlet property="leftBarButtonItem" destination="rVu-A0-i5j" id="Pnj-C6-wC2"/>
+                            <outlet property="rightBarButtonItem" destination="nO0-I0-zJP" id="cMb-tR-Uik"/>
                         </connections>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="myVehiclesButton" destination="nO0-I0-zJP" id="WTe-Ei-or3"/>
                         <outlet property="sideBarButton" destination="rVu-A0-i5j" id="SyX-OL-LUZ"/>
+                        <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="GDN-01-63a"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="yYp-5z-S3g" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -772,16 +883,24 @@ Winterfelt</string>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
+                        <barButtonItem title="My Vehicles" id="PnA-yX-tNu">
+                            <connections>
+                                <action selector="pressedOnMyVehicles:" destination="2vD-H7-IV1" id="jve-Hk-JK1"/>
+                            </connections>
+                        </barButtonItem>
                         <barButtonItem image="menu" id="4Ks-t7-H2G"/>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="Fnt-nt-Bg3">
                         <connections>
                             <outlet property="leftBarButtonItem" destination="4Ks-t7-H2G" id="4a8-FL-0HA"/>
+                            <outlet property="rightBarButtonItem" destination="PnA-yX-tNu" id="Zqb-Pm-kAK"/>
                         </connections>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="myVehiclesButton" destination="PnA-yX-tNu" id="N1r-c4-NLd"/>
                         <outlet property="sideBarButton" destination="4Ks-t7-H2G" id="Dar-Ti-4m0"/>
+                        <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="DRJ-6C-mdm"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sK4-fy-0hd" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -801,7 +920,7 @@ Winterfelt</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TO5-ER-Zok">
-                                <rect key="frame" x="20" y="238" width="280" height="358"/>
+                                <rect key="frame" x="20" y="223" width="280" height="358"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <string key="text">Services:
@@ -818,20 +937,14 @@ Estimated Time Remaining:  	10 minutes
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                                 <dataDetectorType key="dataDetectorTypes" calendarEvent="YES"/>
                             </textView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECTED VEHICLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kpZ-uE-UM1">
-                                <rect key="frame" x="20" y="168" width="280" height="24"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Quick Lane at Village Ford" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="q4Z-y5-y9C">
-                                <rect key="frame" x="20" y="136" width="280" height="24"/>
+                                <rect key="frame" x="20" y="153" width="280" height="24"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="SCZ-Q6-V0P">
-                                <rect key="frame" x="117" y="200" width="87" height="30"/>
+                                <rect key="frame" x="117" y="191" width="87" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rate Service">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
@@ -857,7 +970,6 @@ Estimated Time Remaining:  	10 minutes
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myVehiclesButton" destination="VlO-ew-ByE" id="q4D-XV-a6O"/>
-                        <outlet property="selectedVehicle" destination="kpZ-uE-UM1" id="rYj-NV-Atc"/>
                         <outlet property="sideBarButton" destination="WB8-3y-G2G" id="26G-Z6-RsG"/>
                         <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="2GV-c9-4z1"/>
                     </connections>
@@ -879,17 +991,35 @@ Estimated Time Remaining:  	10 minutes
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xcm-UA-9uV">
-                                <rect key="frame" x="20" y="151" width="280" height="21"/>
+                                <rect key="frame" x="20" y="141" width="280" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                                <color key="textColor" red="1" green="0.59999999999999998" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="8vC-rG-UO5">
-                                <rect key="frame" x="40" y="187" width="240" height="320"/>
+                                <rect key="frame" x="40" y="170" width="240" height="320"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
                                 <attributedString key="attributedText">
-                                    <fragment content="Trim: ">
+                                    <fragment>
+                                        <string key="content">Odometer:
+	</string>
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="65,344 mi">
+                                        <attributes>
+                                            <font key="NSFont" size="14" name="HelveticaNeue"/>
+                                            <font key="NSOriginalFont" size="14" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
+Trim: </string>
                                         <attributes>
                                             <font key="NSFont" size="14" name="HelveticaNeue-Bold"/>
                                             <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
@@ -1175,21 +1305,15 @@ Phone: (123) 321-987</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="rIS-Gb-FyP">
-                                <rect key="frame" x="70" y="164" width="180" height="33"/>
+                                <rect key="frame" x="70" y="150" width="180" height="33"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <state key="normal" title="Schedule Appointment">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Service History:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iDB-ak-28j">
-                                <rect key="frame" x="20" y="243" width="280" height="44"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="80" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="Gsm-at-Yh4">
-                                <rect key="frame" x="20" y="295" width="280" height="510"/>
+                                <rect key="frame" x="20" y="229" width="280" height="510"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1208,8 +1332,25 @@ Phone: (123) 321-987</string>
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
+                                                        <fragment content="Date: ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="04/20/14">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content">Date: 04/20/14
+                                                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1218,11 +1359,30 @@ Phone: (123) 321-987</string>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment>
-                                                            <string key="content">Service: Oil Change
-Odometer: 20546 mi</string>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Oil Change">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="20546 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1247,9 +1407,7 @@ Odometer: 20546 mi</string>
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
-                                                        <fragment>
-                                                            <string key="content">Date: 12/20/13
-</string>
+                                                        <fragment content="Date: ">
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
@@ -1258,10 +1416,40 @@ Odometer: 20546 mi</string>
                                                             </attributes>
                                                         </fragment>
                                                         <fragment>
-                                                            <string key="content">Service: Tire Rotation
-Odometer: 16354 mi</string>
+                                                            <string key="content">12/20/13
+</string>
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Tire Rotation">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="16354 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1286,8 +1474,25 @@ Odometer: 16354 mi</string>
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
+                                                        <fragment content="Date: ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="05/02/13">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content">Date: 05/02/13
+                                                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1296,11 +1501,31 @@ Odometer: 16354 mi</string>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment>
-                                                            <string key="content">Service: Oil Change, Air Filter
-Odometer: 9455 mi</string>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Oil Change, Air Filter">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="9455 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1325,8 +1550,25 @@ Odometer: 9455 mi</string>
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
+                                                        <fragment content="Date: ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="02/02/14">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content">Date: 02/02/14
+                                                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1335,11 +1577,31 @@ Odometer: 9455 mi</string>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment>
-                                                            <string key="content">Service: Brake Pad Replacement
-Odometer: 4344 mi</string>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Brake Pad Replacement">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="4344 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1356,38 +1618,31 @@ Odometer: 4344 mi</string>
                                 </connections>
                             </tableView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="29i-9c-PTw">
-                                <rect key="frame" x="20" y="205" width="69" height="30"/>
+                                <rect key="frame" x="20" y="191" width="69" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Directions">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="X96-3q-Vhu">
-                                <rect key="frame" x="145" y="205" width="30" height="30"/>
+                                <rect key="frame" x="145" y="191" width="30" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Call">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="TQE-qz-afp">
-                                <rect key="frame" x="268" y="205" width="32" height="30"/>
+                                <rect key="frame" x="268" y="191" width="32" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Rate">
                                     <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dLQ-Na-2gE">
-                                <rect key="frame" x="20" y="135" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <navigationItem key="navigationItem" id="Xnq-Pv-cH8"/>
                     <connections>
-                        <outlet property="selectedVehicle" destination="dLQ-Na-2gE" id="vzD-1z-Ebr"/>
                         <outlet property="tableView" destination="Gsm-at-Yh4" id="cgT-AM-LQu"/>
                     </connections>
                 </viewController>
@@ -1459,7 +1714,7 @@ Odometer: 4344 mi</string>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="153" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="5ro-e0-mY5">
-                                <rect key="frame" x="0.0" y="175" width="320" height="500"/>
+                                <rect key="frame" x="0.0" y="153" width="320" height="395"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -1478,8 +1733,25 @@ Odometer: 4344 mi</string>
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
+                                                        <fragment content="Date: ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="4/20/14">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content">Date: 4/20/14
+                                                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1488,11 +1760,31 @@ Odometer: 4344 mi</string>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment>
-                                                            <string key="content">Service: Oil Change
-Odometer: 10546 mi</string>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Oil Change">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="10546 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1543,8 +1835,25 @@ Cgk
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
+                                                        <fragment content="Date: ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="12/20/13">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content">Date: 12/20/13
+                                                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1553,11 +1862,31 @@ Cgk
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment>
-                                                            <string key="content">Service: Tire Rotation
-Odometer: 8775 mi</string>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Tire Rotation">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="8775 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1593,7 +1922,7 @@ Cgk
                                             <segue destination="ZZH-aY-j0j" kind="push" id="bDe-rn-1zv"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell userInteractionEnabled="NO" contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mayCell" rowHeight="155" id="HFu-7c-FHi">
+                                    <tableViewCell contentMode="scaleToFill" selectionStyle="default" accessoryType="disclosureIndicator" indentationWidth="10" reuseIdentifier="mayCell" rowHeight="155" id="HFu-7c-FHi">
                                         <rect key="frame" x="0.0" y="332" width="320" height="155"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="HFu-7c-FHi" id="Ord-Qs-fYB">
@@ -1608,8 +1937,25 @@ Cgk
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
+                                                        <fragment content="Date: ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="5/1/13">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content">Date: 5/1/13
+                                                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1618,11 +1964,31 @@ Cgk
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment>
-                                                            <string key="content">Service: Oil Change
-Odometer: 5098 mi</string>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Oil Change">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="5098 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1673,8 +2039,25 @@ Cgk
                                                         <accessibilityTraits key="traits" none="YES" notEnabled="YES"/>
                                                     </accessibility>
                                                     <attributedString key="attributedText">
+                                                        <fragment content="Date: ">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <font key="NSOriginalFont" size="17" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="1/14/13">
+                                                            <attributes>
+                                                                <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
                                                         <fragment>
-                                                            <string key="content">Date: 1/14/13
+                                                            <string key="content" base64-UTF8="YES">
+Cg
 </string>
                                                             <attributes>
                                                                 <color key="NSColor" name="controlTextColor" catalog="System" colorSpace="catalog"/>
@@ -1683,11 +2066,31 @@ Cgk
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
-                                                        <fragment>
-                                                            <string key="content">Service: Tire Replacement
-Odometer: 3944 mi</string>
+                                                        <fragment content="Service: ">
                                                             <attributes>
                                                                 <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="Tire Replacement">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment>
+                                                            <string key="content">
+Odometer: </string>
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica-Bold"/>
+                                                                <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                                            </attributes>
+                                                        </fragment>
+                                                        <fragment content="3944 mi">
+                                                            <attributes>
+                                                                <font key="NSFont" size="15" name="Helvetica"/>
+                                                                <font key="NSOriginalFont" size="15" name="Helvetica"/>
                                                                 <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
                                                             </attributes>
                                                         </fragment>
@@ -1729,12 +2132,6 @@ Cgk
                                     <outlet property="delegate" destination="U1L-nC-Fui" id="fou-Rw-diC"/>
                                 </connections>
                             </tableView>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECTED VEHICLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rLO-Cc-5dw">
-                                <rect key="frame" x="20" y="146" width="280" height="21"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -1755,7 +2152,6 @@ Cgk
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
                         <outlet property="myVehiclesButton" destination="SIU-OE-8SU" id="fsI-bL-oh6"/>
-                        <outlet property="selectedVehicle" destination="rLO-Cc-5dw" id="nBr-Bt-9m7"/>
                         <outlet property="sideBarButton" destination="lTA-kN-OFN" id="0ef-hU-aMH"/>
                         <outlet property="tableView" destination="5ro-e0-mY5" id="vKL-bn-oxM"/>
                         <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="923-8A-kEl"/>
@@ -1777,14 +2173,8 @@ Cgk
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="SELECTED VEHICLE" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Abo-jW-RlO">
-                                <rect key="frame" x="20" y="145" width="280" height="20"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
-                                <nil key="highlightedColor"/>
-                            </label>
                             <containerView contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="Yhg-B5-4Co">
-                                <rect key="frame" x="0.0" y="175" width="320" height="348"/>
+                                <rect key="frame" x="0.0" y="158" width="320" height="390"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" red="0.99945825729927007" green="0.78735173357664223" blue="0.0" alpha="0.90000000000000002" colorSpace="calibratedRGB"/>
                                 <connections>
@@ -1812,7 +2202,6 @@ Cgk
                     <connections>
                         <outlet property="containerView" destination="Yhg-B5-4Co" id="Kjz-vh-rOP"/>
                         <outlet property="myVehiclesButton" destination="2mb-51-wlw" id="9Fc-zG-jNL"/>
-                        <outlet property="selectedVehicle" destination="Abo-jW-RlO" id="bBJ-2x-23q"/>
                         <outlet property="sideBarButton" destination="TJQ-BI-6ra" id="O42-9d-u6p"/>
                         <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="28D-VU-AL7"/>
                     </connections>
@@ -1857,16 +2246,24 @@ Cgk
                     </view>
                     <toolbarItems>
                         <barButtonItem image="menu" id="ByB-Jf-CL1"/>
+                        <barButtonItem title="My Vehicles" id="3qn-xU-Yxe">
+                            <connections>
+                                <action selector="pressedOnMyVehicles:" destination="UDV-dH-kj8" id="585-YI-KG4"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="aVP-4w-tGx">
                         <connections>
                             <outlet property="leftBarButtonItem" destination="ByB-Jf-CL1" id="hCQ-fH-tNd"/>
+                            <outlet property="rightBarButtonItem" destination="3qn-xU-Yxe" id="OEF-xS-yf5"/>
                         </connections>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="myVehiclesButton" destination="3qn-xU-Yxe" id="7jd-cC-4dT"/>
                         <outlet property="sideBarButton" destination="ByB-Jf-CL1" id="t5L-wa-ejA"/>
                         <outlet property="tableView" destination="hkk-SH-LQC" id="bCA-26-gaW"/>
+                        <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="T0g-A5-pe4"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="UL1-3c-Jj8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1885,40 +2282,95 @@ Cgk
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                         <subviews>
-                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAZ-p7-vLP">
-                                <rect key="frame" x="20" y="74" width="280" height="568"/>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" scrollEnabled="NO" editable="NO" usesAttributedText="YES" translatesAutoresizingMaskIntoConstraints="NO" id="eAZ-p7-vLP">
+                                <rect key="frame" x="20" y="93" width="280" height="382"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="calibratedRGB"/>
-                                <string key="text">Phone 
-(8 a.m. - 5 p.m. Monday - Friday)
-
-800-392-3673
-800-232-5952 (for the hearing impaired)
-
+                                <attributedString key="attributedText">
+                                    <fragment>
+                                        <string key="content">Phone 
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment content="(8 a.m. - 5 p.m. Monday - ">
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content" base64-UTF8="YES">
+Cg
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	800-392-3673
+	Impaired Hearing:
+	800-232-5952</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">
 
 Mail:
-Quick Lane
-Customer Relationship Center
-P.O. Box 6248
-Dearborn, MI 48126</string>
-                                <color key="textColor" red="0.0" green="0.54105839420000001" blue="0.74783302920000005" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue-Bold"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                    <fragment>
+                                        <string key="content">	Quick Lane
+	Customer Relationship Center
+	P.O. Box 6248
+	Dearborn, MI 48126</string>
+                                        <attributes>
+                                            <font key="NSFont" size="17" name="HelveticaNeue"/>
+                                            <paragraphStyle key="NSParagraphStyle" alignment="left" lineBreakMode="wordWrapping" baseWritingDirection="natural"/>
+                                        </attributes>
+                                    </fragment>
+                                </attributedString>
                                 <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                             </textView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="77L-eP-58U">
+                                <rect key="frame" x="92" y="128" width="136" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <state key="normal" title="Roadside Assitance">
+                                    <color key="titleShadowColor" white="0.5" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <toolbarItems>
                         <barButtonItem image="menu" id="rb7-1J-T6o"/>
+                        <barButtonItem title="My Vehicles" id="Ggu-ZN-HxC">
+                            <connections>
+                                <action selector="pressedOnMyVehicles:" destination="LxL-jU-EKz" id="QSH-xU-LXn"/>
+                            </connections>
+                        </barButtonItem>
                     </toolbarItems>
                     <navigationItem key="navigationItem" title="Title" id="Ngc-DN-HZt">
                         <connections>
                             <outlet property="leftBarButtonItem" destination="rb7-1J-T6o" id="jsY-OW-TSe"/>
+                            <outlet property="rightBarButtonItem" destination="Ggu-ZN-HxC" id="Yfm-ve-f64"/>
                         </connections>
                     </navigationItem>
                     <simulatedToolbarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
+                        <outlet property="myVehiclesButton" destination="Ggu-ZN-HxC" id="Aip-8F-8bF"/>
                         <outlet property="sideBarButton" destination="rb7-1J-T6o" id="EDS-yq-wwN"/>
+                        <segue destination="4N5-jj-1eg" kind="push" identifier="myVehiclesSegue" id="ySm-1f-ODG"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cwr-1a-J9p" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -2083,25 +2535,25 @@ Service Time:
                         <viewControllerLayoutGuide type="bottom" id="aML-lo-ERD"/>
                     </layoutGuides>
                     <view key="view" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="OFI-az-3jG">
-                        <rect key="frame" x="0.0" y="0.0" width="320" height="348"/>
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="390"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Milestone:" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="StD-RA-yAQ">
-                                <rect key="frame" x="20" y="20" width="80" height="21"/>
+                                <rect key="frame" x="20" y="13" width="80" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.54105839420000001" blue="0.74783302920000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="MILEAGE" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EuK-Pf-iLg">
-                                <rect key="frame" x="108" y="20" width="192" height="21"/>
+                                <rect key="frame" x="108" y="13" width="192" height="21"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" red="0.0" green="0.54105839420000001" blue="0.74783302920000005" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="22" sectionFooterHeight="22" translatesAutoresizingMaskIntoConstraints="NO" id="xgv-GA-Aso">
-                                <rect key="frame" x="0.0" y="49" width="320" height="279"/>
+                                <rect key="frame" x="0.0" y="44" width="320" height="307"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <prototypes>
@@ -2147,9 +2599,9 @@ Service Time:
         <simulatedScreenMetrics key="destination" type="retina4"/>
     </simulatedMetricsContainer>
     <inferredMetricsTieBreakers>
-        <segue reference="sB2-G2-hgC"/>
-        <segue reference="Mf6-au-dCd"/>
-        <segue reference="z5a-fd-T1J"/>
+        <segue reference="VJy-aZ-vEe"/>
         <segue reference="EU4-Hc-vV2"/>
+        <segue reference="iuK-U0-R5W"/>
+        <segue reference="z5a-fd-T1J"/>
     </inferredMetricsTieBreakers>
 </document>

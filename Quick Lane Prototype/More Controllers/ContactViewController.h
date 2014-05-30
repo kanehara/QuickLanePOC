@@ -12,4 +12,7 @@
 
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *sideBarButton;
 
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *myVehiclesButton;
+-(IBAction)pressedOnMyVehicles:(id)sender;
+
 @end

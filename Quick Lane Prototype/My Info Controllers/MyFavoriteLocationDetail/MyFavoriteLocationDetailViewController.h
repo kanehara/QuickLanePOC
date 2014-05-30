@@ -12,6 +12,4 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
-@property (nonatomic, weak) IBOutlet UILabel *selectedVehicle;
-
 @end

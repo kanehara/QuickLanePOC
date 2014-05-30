@@ -44,14 +44,13 @@
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
     [self.view addSubview:GD.quickLaneImageView];
+    [self.view addSubview:GD.selectedVehicleLabel];
     
     // Set vehicles button
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
-                                [UIFont systemFontOfSize:10], NSFontAttributeName, nil];
+                                [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
     [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
     
-    // Set selected vehicle
-    self.selectedVehicle.text = GD.selectedVehicle;
 }
 
 - (void)didReceiveMemoryWarning

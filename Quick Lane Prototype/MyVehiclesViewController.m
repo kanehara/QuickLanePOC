@@ -28,19 +28,10 @@
     // Set header Quick Lane image
     GD = [GlobalData getInstance];
     [self.view addSubview:GD.quickLaneImageView];
+    [self.view addSubview:GD.selectedVehicleLabel];
     
     // Get rid of extra header space
     self.automaticallyAdjustsScrollViewInsets = NO;
-    
-    if (GD.selectedVehicle == nil) {
-        _selectedVehicleLabel.text = @"Not Selected";
-    }
-    else {
-        _selectedVehicleLabel.text = GD.selectedVehicle;
-    }
-    
-    [_selectedVehicleLabel setCenter:self.view.center];
-    
 }
 
 -(NSInteger) numberOfSectionsInTableView:(UITableView *)tableView {
@@ -74,24 +65,16 @@
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:cellIdentifier forIndexPath:indexPath];
     return cell;
 }
-/*
--(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    MyVehicleInfoViewController *destinationViewController = segue.destinationViewController;
-    
-    NSIndexPath *indexPath = [self.tableView indexPathForSelectedRow];
-    NSInteger row = indexPath.row;
-    
-    NSString *vehicleName = GD.vehicleNames[row];
-    
-    destinationViewController.vehicleNameText = vehicleName;
-}*/
+
 
 -(void) tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath {
-    _selectedVehicleLabel.text = GD.selectedVehicle;
-    
     NSInteger row = indexPath.row;
     NSString *selectedVehicleString = GD.vehicleNames[row];
     [GD setSelectedVehicle:selectedVehicleString];
+}
+
+-(IBAction)pressedOnNewVehicleEnryButton:(id)sender {
+    [self performSegueWithIdentifier:@"newVehicleEntrySegue" sender:self];
 }
 
 @end

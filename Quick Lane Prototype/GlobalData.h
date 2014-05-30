@@ -13,6 +13,8 @@
     
     UIImageView *_quickLaneImageView;
     
+    UILabel *_selectedVehicleLabel;
+    
     NSString *_selectedVehicle;
     
     NSMutableArray *_vehicleNames;
@@ -21,6 +23,7 @@
 @property(nonatomic, strong, readwrite) UIImageView *quickLaneImageView;
 @property(nonatomic, strong, readwrite) NSString *selectedVehicle;
 @property (nonatomic, strong, readwrite) NSMutableArray *vehicleNames;
+@property (nonatomic, strong, readwrite) UILabel *selectedVehicleLabel;
 
 +(GlobalData*) getInstance;
 

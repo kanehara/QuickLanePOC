@@ -33,9 +33,7 @@
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
     [self.view addSubview:GD.quickLaneImageView];
-    
-    // Set selected vehicle
-    [self.selectedVehicle setText:GD.selectedVehicle];
+    [self.view addSubview:GD.selectedVehicleLabel];
     
     // Set vehicles button
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:

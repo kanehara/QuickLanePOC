@@ -32,7 +32,17 @@
     // Set header Quick Lane image
     GlobalData *GD = [GlobalData getInstance];
     [self.view addSubview:GD.quickLaneImageView];
+    [self.view addSubview:GD.selectedVehicleLabel];
 
+    // Set vehicles button
+    NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
+                                [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
+    [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
+
+}
+
+-(IBAction)pressedOnMyVehicles:(id)sender {
+    [self performSegueWithIdentifier:@"myVehiclesSegue" sender:self];
 }
 
 @end

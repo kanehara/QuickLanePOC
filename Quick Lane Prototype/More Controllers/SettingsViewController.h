@@ -14,4 +14,7 @@
 
 @property (nonatomic, weak) IBOutlet UITableView *tableView;
 
+@property (nonatomic, weak) IBOutlet UIBarButtonItem *myVehiclesButton;
+-(IBAction)pressedOnMyVehicles:(id)sender;
+
 @end
