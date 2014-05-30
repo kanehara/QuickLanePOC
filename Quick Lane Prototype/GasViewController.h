@@ -1,13 +1,13 @@
 //
-//  FirstViewController.h
+//  GasViewController.h
 //  Quick Lane Prototype
 //
-//  Created by kanehara on 5/14/26 H.
+//  Created by kanehara on 5/20/26 H.
 //  Copyright (c) 26 Heisei kanehara. All rights reserved.
 //
 
 #import <UIKit/UIKit.h>
 
-@interface FirstViewController : UIViewController
+@interface GasViewController : UITableViewController
 
 @end

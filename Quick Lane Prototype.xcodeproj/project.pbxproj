@@ -7,6 +7,38 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		5720E208192B96AB00B08D92 /* MyLocationsTableViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 5720E207192B96AB00B08D92 /* MyLocationsTableViewController.m */; };
+		57928B0C1935046F007685AA /* MyVehicleInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57928B0B1935046F007685AA /* MyVehicleInfoViewController.m */; };
+		57928B1519365830007685AA /* MyMaintenanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57928B1419365830007685AA /* MyMaintenanceViewController.m */; };
+		57928B1B19365C33007685AA /* MyMaintenanceChildViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57928B1A19365C33007685AA /* MyMaintenanceChildViewController.m */; };
+		57928B1D19376CD3007685AA /* GoogleMap.png in Resources */ = {isa = PBXBuildFile; fileRef = 57928B1C19376CD3007685AA /* GoogleMap.png */; };
+		57AAB54D192BA8720096982F /* qllogo (1).gif in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB54C192BA8720096982F /* qllogo (1).gif */; };
+		57AAB551192BAAA00096982F /* MyVehiclesViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB550192BAAA00096982F /* MyVehiclesViewController.m */; };
+		57AAB553192BAD5C0096982F /* QuickLane ReadyToServe.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB552192BAD5C0096982F /* QuickLane ReadyToServe.png */; };
+		57AAB570192BCC180096982F /* AppointViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB565192BCC180096982F /* AppointViewController.m */; };
+		57AAB571192BCC180096982F /* ClaimRebateViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB567192BCC180096982F /* ClaimRebateViewController.m */; };
+		57AAB572192BCC180096982F /* FindLocationsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB569192BCC180096982F /* FindLocationsViewController.m */; };
+		57AAB573192BCC180096982F /* GasViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB56B192BCC180096982F /* GasViewController.m */; };
+		57AAB575192BCC180096982F /* SearchTiresViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB56F192BCC180096982F /* SearchTiresViewController.m */; };
+		57AAB57F192BD96B0096982F /* ServiceHistoryViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB57E192BD96B0096982F /* ServiceHistoryViewController.m */; };
+		57AAB582192BDAD00096982F /* ServiceStatusViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB581192BDAD00096982F /* ServiceStatusViewController.m */; };
+		57AAB58F192BE8AF0096982F /* ContactViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB58E192BE8AF0096982F /* ContactViewController.m */; };
+		57AAB592192BE8C00096982F /* SettingsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB591192BE8C00096982F /* SettingsViewController.m */; };
+		57AAB595192CF5470096982F /* GlobalData.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB594192CF5470096982F /* GlobalData.m */; };
+		57AAB599192D21CA0096982F /* 25off.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB596192D21CA0096982F /* 25off.jpg */; };
+		57AAB59A192D21CA0096982F /* 60tire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB597192D21CA0096982F /* 60tire.jpg */; };
+		57AAB59B192D21CA0096982F /* 120tire.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 57AAB598192D21CA0096982F /* 120tire.jpg */; };
+		57AAB59E192E365F0096982F /* MyOfferViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB59D192E365F0096982F /* MyOfferViewController.m */; };
+		57AAB5A1192E369C0096982F /* MyFavoriteLocationViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB5A0192E369C0096982F /* MyFavoriteLocationViewController.m */; };
+		57AAB5A7192E73160096982F /* MyFavoriteLocationDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AAB5A6192E73160096982F /* MyFavoriteLocationDetailViewController.m */; };
+		57AD5B101937781800805447 /* RoadsideAssistanceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD5B0F1937781800805447 /* RoadsideAssistanceViewController.m */; };
+		57AD5B131937901100805447 /* TireTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 57AD5B121937901100805447 /* TireTableViewCell.m */; };
+		57AD5B1B1937BFAE00805447 /* otherTire0.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B151937BFAE00805447 /* otherTire0.png */; };
+		57AD5B1C1937BFAE00805447 /* otherTire1.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B161937BFAE00805447 /* otherTire1.png */; };
+		57AD5B1D1937BFAE00805447 /* otherTire2.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B171937BFAE00805447 /* otherTire2.png */; };
+		57AD5B1E1937BFAE00805447 /* otherTire3.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B181937BFAE00805447 /* otherTire3.png */; };
+		57AD5B1F1937BFAE00805447 /* otherTire4.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B191937BFAE00805447 /* otherTire4.png */; };
+		57AD5B201937BFAE00805447 /* recommendedTire.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B1A1937BFAE00805447 /* recommendedTire.png */; };
 		57EEB44219244D83004A426F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44119244D83004A426F /* Foundation.framework */; };
 		57EEB44419244D83004A426F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44319244D83004A426F /* CoreGraphics.framework */; };
 		57EEB44619244D83004A426F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44519244D83004A426F /* UIKit.framework */; };
@@ -14,14 +46,14 @@
 		57EEB44E19244D83004A426F /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEB44D19244D83004A426F /* main.m */; };
 		57EEB45219244D83004A426F /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEB45119244D83004A426F /* AppDelegate.m */; };
 		57EEB45519244D83004A426F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 57EEB45319244D83004A426F /* Main.storyboard */; };
-		57EEB45819244D83004A426F /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEB45719244D83004A426F /* FirstViewController.m */; };
-		57EEB45B19244D83004A426F /* SecondViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEB45A19244D83004A426F /* SecondViewController.m */; };
 		57EEB45D19244D83004A426F /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 57EEB45C19244D83004A426F /* Images.xcassets */; };
 		57EEB46419244D84004A426F /* XCTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB46319244D84004A426F /* XCTest.framework */; };
 		57EEB46519244D84004A426F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44119244D83004A426F /* Foundation.framework */; };
 		57EEB46619244D84004A426F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44519244D83004A426F /* UIKit.framework */; };
 		57EEB46E19244D84004A426F /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 57EEB46C19244D84004A426F /* InfoPlist.strings */; };
 		57EEB47019244D84004A426F /* Quick_Lane_PrototypeTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEB46F19244D84004A426F /* Quick_Lane_PrototypeTests.m */; };
+		57EEB49F192A40B2004A426F /* SWRevealViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEB49E192A40B2004A426F /* SWRevealViewController.m */; };
+		57EEB4AD192A4D01004A426F /* SidebarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57EEB4AC192A4D01004A426F /* SidebarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,6 +67,58 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		5720E206192B96AB00B08D92 /* MyLocationsTableViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyLocationsTableViewController.h; path = "Service Controllers/MyLocationsViewController/MyLocationsTableViewController.h"; sourceTree = "<group>"; };
+		5720E207192B96AB00B08D92 /* MyLocationsTableViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyLocationsTableViewController.m; path = "Service Controllers/MyLocationsViewController/MyLocationsTableViewController.m"; sourceTree = "<group>"; };
+		57928B0A1935046F007685AA /* MyVehicleInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyVehicleInfoViewController.h; path = "My Info Controllers/MyVehicleInfoViewController.h"; sourceTree = "<group>"; };
+		57928B0B1935046F007685AA /* MyVehicleInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyVehicleInfoViewController.m; path = "My Info Controllers/MyVehicleInfoViewController.m"; sourceTree = "<group>"; };
+		57928B1319365830007685AA /* MyMaintenanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMaintenanceViewController.h; path = "My Info Controllers/MyMaintenanceViewController.h"; sourceTree = "<group>"; };
+		57928B1419365830007685AA /* MyMaintenanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMaintenanceViewController.m; path = "My Info Controllers/MyMaintenanceViewController.m"; sourceTree = "<group>"; };
+		57928B1919365C33007685AA /* MyMaintenanceChildViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyMaintenanceChildViewController.h; path = "My Info Controllers/MyMaintenanceChildViewController.h"; sourceTree = "<group>"; };
+		57928B1A19365C33007685AA /* MyMaintenanceChildViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyMaintenanceChildViewController.m; path = "My Info Controllers/MyMaintenanceChildViewController.m"; sourceTree = "<group>"; };
+		57928B1C19376CD3007685AA /* GoogleMap.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = GoogleMap.png; path = "Quick Lane Prototype/My Images/GoogleMap.png"; sourceTree = "<group>"; };
+		57AAB54C192BA8720096982F /* qllogo (1).gif */ = {isa = PBXFileReference; lastKnownFileType = image.gif; name = "qllogo (1).gif"; path = "Quick Lane Prototype/My Images/qllogo (1).gif"; sourceTree = "<group>"; };
+		57AAB54F192BAAA00096982F /* MyVehiclesViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MyVehiclesViewController.h; sourceTree = "<group>"; };
+		57AAB550192BAAA00096982F /* MyVehiclesViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyVehiclesViewController.m; sourceTree = "<group>"; };
+		57AAB552192BAD5C0096982F /* QuickLane ReadyToServe.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "QuickLane ReadyToServe.png"; path = "Quick Lane Prototype/My Images/QuickLane ReadyToServe.png"; sourceTree = "<group>"; };
+		57AAB564192BCC180096982F /* AppointViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppointViewController.h; path = "Service Controllers/AppointViewController.h"; sourceTree = "<group>"; };
+		57AAB565192BCC180096982F /* AppointViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = AppointViewController.m; path = "Service Controllers/AppointViewController.m"; sourceTree = "<group>"; };
+		57AAB566192BCC180096982F /* ClaimRebateViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ClaimRebateViewController.h; path = "Service Controllers/ClaimRebateViewController.h"; sourceTree = "<group>"; };
+		57AAB567192BCC180096982F /* ClaimRebateViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ClaimRebateViewController.m; path = "Service Controllers/ClaimRebateViewController.m"; sourceTree = "<group>"; };
+		57AAB568192BCC180096982F /* FindLocationsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = FindLocationsViewController.h; path = "Service Controllers/FindLocationsViewController.h"; sourceTree = "<group>"; };
+		57AAB569192BCC180096982F /* FindLocationsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = FindLocationsViewController.m; path = "Service Controllers/FindLocationsViewController.m"; sourceTree = "<group>"; };
+		57AAB56A192BCC180096982F /* GasViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = GasViewController.h; path = "Service Controllers/GasViewController.h"; sourceTree = "<group>"; };
+		57AAB56B192BCC180096982F /* GasViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = GasViewController.m; path = "Service Controllers/GasViewController.m"; sourceTree = "<group>"; };
+		57AAB56E192BCC180096982F /* SearchTiresViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchTiresViewController.h; path = "Service Controllers/SearchTiresViewController.h"; sourceTree = "<group>"; };
+		57AAB56F192BCC180096982F /* SearchTiresViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchTiresViewController.m; path = "Service Controllers/SearchTiresViewController.m"; sourceTree = "<group>"; };
+		57AAB57D192BD96B0096982F /* ServiceHistoryViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceHistoryViewController.h; path = "My Info Controllers/ServiceHistoryViewController.h"; sourceTree = "<group>"; };
+		57AAB57E192BD96B0096982F /* ServiceHistoryViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceHistoryViewController.m; path = "My Info Controllers/ServiceHistoryViewController.m"; sourceTree = "<group>"; };
+		57AAB580192BDAD00096982F /* ServiceStatusViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ServiceStatusViewController.h; path = "My Info Controllers/ServiceStatusViewController.h"; sourceTree = "<group>"; };
+		57AAB581192BDAD00096982F /* ServiceStatusViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ServiceStatusViewController.m; path = "My Info Controllers/ServiceStatusViewController.m"; sourceTree = "<group>"; };
+		57AAB58D192BE8AF0096982F /* ContactViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = ContactViewController.h; path = "More Controllers/ContactViewController.h"; sourceTree = "<group>"; };
+		57AAB58E192BE8AF0096982F /* ContactViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = ContactViewController.m; path = "More Controllers/ContactViewController.m"; sourceTree = "<group>"; };
+		57AAB590192BE8C00096982F /* SettingsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SettingsViewController.h; path = "More Controllers/SettingsViewController.h"; sourceTree = "<group>"; };
+		57AAB591192BE8C00096982F /* SettingsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SettingsViewController.m; path = "More Controllers/SettingsViewController.m"; sourceTree = "<group>"; };
+		57AAB593192CF4D80096982F /* GlobalData.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GlobalData.h; sourceTree = "<group>"; };
+		57AAB594192CF5470096982F /* GlobalData.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GlobalData.m; sourceTree = "<group>"; };
+		57AAB596192D21CA0096982F /* 25off.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 25off.jpg; sourceTree = "<group>"; };
+		57AAB597192D21CA0096982F /* 60tire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 60tire.jpg; sourceTree = "<group>"; };
+		57AAB598192D21CA0096982F /* 120tire.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = 120tire.jpg; sourceTree = "<group>"; };
+		57AAB59C192E365F0096982F /* MyOfferViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyOfferViewController.h; path = "My Info Controllers/MyOfferViewController.h"; sourceTree = "<group>"; };
+		57AAB59D192E365F0096982F /* MyOfferViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyOfferViewController.m; path = "My Info Controllers/MyOfferViewController.m"; sourceTree = "<group>"; };
+		57AAB59F192E369C0096982F /* MyFavoriteLocationViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyFavoriteLocationViewController.h; path = "My Info Controllers/MyFavoriteLocationViewController.h"; sourceTree = "<group>"; };
+		57AAB5A0192E369C0096982F /* MyFavoriteLocationViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyFavoriteLocationViewController.m; path = "My Info Controllers/MyFavoriteLocationViewController.m"; sourceTree = "<group>"; };
+		57AAB5A5192E73160096982F /* MyFavoriteLocationDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = MyFavoriteLocationDetailViewController.h; path = "My Info Controllers/MyFavoriteLocationDetail/MyFavoriteLocationDetailViewController.h"; sourceTree = "<group>"; };
+		57AAB5A6192E73160096982F /* MyFavoriteLocationDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = MyFavoriteLocationDetailViewController.m; path = "My Info Controllers/MyFavoriteLocationDetail/MyFavoriteLocationDetailViewController.m"; sourceTree = "<group>"; };
+		57AD5B0E1937781800805447 /* RoadsideAssistanceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = RoadsideAssistanceViewController.h; path = "Service Controllers/RoadsideAssistanceViewController.h"; sourceTree = "<group>"; };
+		57AD5B0F1937781800805447 /* RoadsideAssistanceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = RoadsideAssistanceViewController.m; path = "Service Controllers/RoadsideAssistanceViewController.m"; sourceTree = "<group>"; };
+		57AD5B111937901100805447 /* TireTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = TireTableViewCell.h; path = "Service Controllers/TireTableViewCell/TireTableViewCell.h"; sourceTree = "<group>"; };
+		57AD5B121937901100805447 /* TireTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = TireTableViewCell.m; path = "Service Controllers/TireTableViewCell/TireTableViewCell.m"; sourceTree = "<group>"; };
+		57AD5B151937BFAE00805447 /* otherTire0.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otherTire0.png; path = "Quick Lane Prototype/My Images/otherTire0.png"; sourceTree = "<group>"; };
+		57AD5B161937BFAE00805447 /* otherTire1.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otherTire1.png; path = "Quick Lane Prototype/My Images/otherTire1.png"; sourceTree = "<group>"; };
+		57AD5B171937BFAE00805447 /* otherTire2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otherTire2.png; path = "Quick Lane Prototype/My Images/otherTire2.png"; sourceTree = "<group>"; };
+		57AD5B181937BFAE00805447 /* otherTire3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otherTire3.png; path = "Quick Lane Prototype/My Images/otherTire3.png"; sourceTree = "<group>"; };
+		57AD5B191937BFAE00805447 /* otherTire4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otherTire4.png; path = "Quick Lane Prototype/My Images/otherTire4.png"; sourceTree = "<group>"; };
+		57AD5B1A1937BFAE00805447 /* recommendedTire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recommendedTire.png; path = "Quick Lane Prototype/My Images/recommendedTire.png"; sourceTree = "<group>"; };
 		57EEB43E19244D83004A426F /* Quick Lane Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Lane Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EEB44119244D83004A426F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		57EEB44319244D83004A426F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -46,16 +130,16 @@
 		57EEB45019244D83004A426F /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		57EEB45119244D83004A426F /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		57EEB45419244D83004A426F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		57EEB45619244D83004A426F /* FirstViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewController.h; sourceTree = "<group>"; };
-		57EEB45719244D83004A426F /* FirstViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewController.m; sourceTree = "<group>"; };
-		57EEB45919244D83004A426F /* SecondViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SecondViewController.h; sourceTree = "<group>"; };
-		57EEB45A19244D83004A426F /* SecondViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SecondViewController.m; sourceTree = "<group>"; };
 		57EEB45C19244D83004A426F /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		57EEB46219244D84004A426F /* Quick Lane PrototypeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Quick Lane PrototypeTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EEB46319244D84004A426F /* XCTest.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = XCTest.framework; path = Library/Frameworks/XCTest.framework; sourceTree = DEVELOPER_DIR; };
 		57EEB46B19244D84004A426F /* Quick Lane PrototypeTests-Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = "Quick Lane PrototypeTests-Info.plist"; sourceTree = "<group>"; };
 		57EEB46D19244D84004A426F /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/InfoPlist.strings; sourceTree = "<group>"; };
 		57EEB46F19244D84004A426F /* Quick_Lane_PrototypeTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Quick_Lane_PrototypeTests.m; sourceTree = "<group>"; };
+		57EEB49D192A40B2004A426F /* SWRevealViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SWRevealViewController.h; path = "../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.h"; sourceTree = "<group>"; };
+		57EEB49E192A40B2004A426F /* SWRevealViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SWRevealViewController.m; path = "../SWRevealViewController-master/SWRevealViewController/SWRevealViewController.m"; sourceTree = "<group>"; };
+		57EEB4AB192A4D01004A426F /* SidebarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SidebarViewController.h; path = ../../SidebarDemoEmpty/SidebarDemo/SidebarViewController.h; sourceTree = "<group>"; };
+		57EEB4AC192A4D01004A426F /* SidebarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SidebarViewController.m; path = ../../SidebarDemoEmpty/SidebarDemo/SidebarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -82,15 +166,106 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		5720E209192B96B100B08D92 /* MyLocationsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				5720E206192B96AB00B08D92 /* MyLocationsTableViewController.h */,
+				5720E207192B96AB00B08D92 /* MyLocationsTableViewController.m */,
+			);
+			name = MyLocationsViewController;
+			sourceTree = "<group>";
+		};
+		5743DDC8192B027A00BC4FF7 /* SidebarViewController (Rear) */ = {
+			isa = PBXGroup;
+			children = (
+				57EEB4AB192A4D01004A426F /* SidebarViewController.h */,
+				57EEB4AC192A4D01004A426F /* SidebarViewController.m */,
+			);
+			name = "SidebarViewController (Rear)";
+			sourceTree = "<group>";
+		};
+		57AAB54E192BA8770096982F /* Images */ = {
+			isa = PBXGroup;
+			children = (
+				57AD5B151937BFAE00805447 /* otherTire0.png */,
+				57AD5B161937BFAE00805447 /* otherTire1.png */,
+				57AD5B171937BFAE00805447 /* otherTire2.png */,
+				57AD5B181937BFAE00805447 /* otherTire3.png */,
+				57AD5B191937BFAE00805447 /* otherTire4.png */,
+				57AD5B1A1937BFAE00805447 /* recommendedTire.png */,
+				57928B1C19376CD3007685AA /* GoogleMap.png */,
+				57AAB596192D21CA0096982F /* 25off.jpg */,
+				57AAB597192D21CA0096982F /* 60tire.jpg */,
+				57AAB598192D21CA0096982F /* 120tire.jpg */,
+				57AAB552192BAD5C0096982F /* QuickLane ReadyToServe.png */,
+				57AAB54C192BA8720096982F /* qllogo (1).gif */,
+			);
+			name = Images;
+			sourceTree = "<group>";
+		};
+		57AAB57C192BD7400096982F /* My Info Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57928B0A1935046F007685AA /* MyVehicleInfoViewController.h */,
+				57928B0B1935046F007685AA /* MyVehicleInfoViewController.m */,
+				57AAB59F192E369C0096982F /* MyFavoriteLocationViewController.h */,
+				57AAB5A0192E369C0096982F /* MyFavoriteLocationViewController.m */,
+				57AAB59C192E365F0096982F /* MyOfferViewController.h */,
+				57AAB59D192E365F0096982F /* MyOfferViewController.m */,
+				57AAB57D192BD96B0096982F /* ServiceHistoryViewController.h */,
+				57AAB57E192BD96B0096982F /* ServiceHistoryViewController.m */,
+				57928B1319365830007685AA /* MyMaintenanceViewController.h */,
+				57928B1419365830007685AA /* MyMaintenanceViewController.m */,
+				57928B1919365C33007685AA /* MyMaintenanceChildViewController.h */,
+				57928B1A19365C33007685AA /* MyMaintenanceChildViewController.m */,
+				57AAB580192BDAD00096982F /* ServiceStatusViewController.h */,
+				57AAB581192BDAD00096982F /* ServiceStatusViewController.m */,
+				57AAB5A8192E73210096982F /* My Favorite Locations */,
+			);
+			name = "My Info Controllers";
+			sourceTree = "<group>";
+		};
+		57AAB589192BE8830096982F /* More Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57AAB58D192BE8AF0096982F /* ContactViewController.h */,
+				57AAB58E192BE8AF0096982F /* ContactViewController.m */,
+				57AAB590192BE8C00096982F /* SettingsViewController.h */,
+				57AAB591192BE8C00096982F /* SettingsViewController.m */,
+			);
+			name = "More Controllers";
+			sourceTree = "<group>";
+		};
+		57AAB5A8192E73210096982F /* My Favorite Locations */ = {
+			isa = PBXGroup;
+			children = (
+				57AAB5A5192E73160096982F /* MyFavoriteLocationDetailViewController.h */,
+				57AAB5A6192E73160096982F /* MyFavoriteLocationDetailViewController.m */,
+			);
+			name = "My Favorite Locations";
+			sourceTree = "<group>";
+		};
+		57AD5B141937901700805447 /* TireTableViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				57AD5B111937901100805447 /* TireTableViewCell.h */,
+				57AD5B121937901100805447 /* TireTableViewCell.m */,
+			);
+			name = TireTableViewCell;
+			sourceTree = "<group>";
+		};
 		57EEB43519244D83004A426F = {
 			isa = PBXGroup;
 			children = (
 				57EEB44719244D83004A426F /* Quick Lane Prototype */,
+				57EEB4A0192A40BC004A426F /* SWRevealViewController */,
 				57EEB46919244D84004A426F /* Quick Lane PrototypeTests */,
 				57EEB44019244D83004A426F /* Frameworks */,
 				57EEB43F19244D83004A426F /* Products */,
+				57AAB54E192BA8770096982F /* Images */,
 			);
 			sourceTree = "<group>";
+			usesTabs = 0;
 		};
 		57EEB43F19244D83004A426F /* Products */ = {
 			isa = PBXGroup;
@@ -115,13 +290,17 @@
 		57EEB44719244D83004A426F /* Quick Lane Prototype */ = {
 			isa = PBXGroup;
 			children = (
+				57EEB45319244D83004A426F /* Main.storyboard */,
+				57AAB593192CF4D80096982F /* GlobalData.h */,
+				57AAB594192CF5470096982F /* GlobalData.m */,
+				5743DDC8192B027A00BC4FF7 /* SidebarViewController (Rear) */,
 				57EEB45019244D83004A426F /* AppDelegate.h */,
 				57EEB45119244D83004A426F /* AppDelegate.m */,
-				57EEB45319244D83004A426F /* Main.storyboard */,
-				57EEB45619244D83004A426F /* FirstViewController.h */,
-				57EEB45719244D83004A426F /* FirstViewController.m */,
-				57EEB45919244D83004A426F /* SecondViewController.h */,
-				57EEB45A19244D83004A426F /* SecondViewController.m */,
+				57AAB54F192BAAA00096982F /* MyVehiclesViewController.h */,
+				57AAB550192BAAA00096982F /* MyVehiclesViewController.m */,
+				57AAB57C192BD7400096982F /* My Info Controllers */,
+				57EEB48D19264CCD004A426F /* Service Controllers */,
+				57AAB589192BE8830096982F /* More Controllers */,
 				57EEB45C19244D83004A426F /* Images.xcassets */,
 				57EEB44819244D83004A426F /* Supporting Files */,
 			);
@@ -155,6 +334,36 @@
 				57EEB46C19244D84004A426F /* InfoPlist.strings */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		57EEB48D19264CCD004A426F /* Service Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				57AAB568192BCC180096982F /* FindLocationsViewController.h */,
+				57AAB569192BCC180096982F /* FindLocationsViewController.m */,
+				57AAB56E192BCC180096982F /* SearchTiresViewController.h */,
+				57AAB56F192BCC180096982F /* SearchTiresViewController.m */,
+				57AAB564192BCC180096982F /* AppointViewController.h */,
+				57AAB565192BCC180096982F /* AppointViewController.m */,
+				57AAB566192BCC180096982F /* ClaimRebateViewController.h */,
+				57AAB567192BCC180096982F /* ClaimRebateViewController.m */,
+				57AAB56A192BCC180096982F /* GasViewController.h */,
+				57AAB56B192BCC180096982F /* GasViewController.m */,
+				57AD5B0E1937781800805447 /* RoadsideAssistanceViewController.h */,
+				57AD5B0F1937781800805447 /* RoadsideAssistanceViewController.m */,
+				5720E209192B96B100B08D92 /* MyLocationsViewController */,
+				57AD5B141937901700805447 /* TireTableViewCell */,
+			);
+			name = "Service Controllers";
+			sourceTree = "<group>";
+		};
+		57EEB4A0192A40BC004A426F /* SWRevealViewController */ = {
+			isa = PBXGroup;
+			children = (
+				57EEB49D192A40B2004A426F /* SWRevealViewController.h */,
+				57EEB49E192A40B2004A426F /* SWRevealViewController.m */,
+			);
+			name = SWRevealViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -233,9 +442,21 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				57AD5B1E1937BFAE00805447 /* otherTire3.png in Resources */,
 				57EEB45D19244D83004A426F /* Images.xcassets in Resources */,
+				57AAB59B192D21CA0096982F /* 120tire.jpg in Resources */,
+				57AD5B201937BFAE00805447 /* recommendedTire.png in Resources */,
+				57AAB59A192D21CA0096982F /* 60tire.jpg in Resources */,
+				57AD5B1B1937BFAE00805447 /* otherTire0.png in Resources */,
 				57EEB44C19244D83004A426F /* InfoPlist.strings in Resources */,
+				57AD5B1D1937BFAE00805447 /* otherTire2.png in Resources */,
+				57AD5B1F1937BFAE00805447 /* otherTire4.png in Resources */,
+				57AAB54D192BA8720096982F /* qllogo (1).gif in Resources */,
 				57EEB45519244D83004A426F /* Main.storyboard in Resources */,
+				57928B1D19376CD3007685AA /* GoogleMap.png in Resources */,
+				57AAB599192D21CA0096982F /* 25off.jpg in Resources */,
+				57AD5B1C1937BFAE00805447 /* otherTire1.png in Resources */,
+				57AAB553192BAD5C0096982F /* QuickLane ReadyToServe.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,10 +475,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				57EEB45B19244D83004A426F /* SecondViewController.m in Sources */,
+				57AAB595192CF5470096982F /* GlobalData.m in Sources */,
 				57EEB45219244D83004A426F /* AppDelegate.m in Sources */,
-				57EEB45819244D83004A426F /* FirstViewController.m in Sources */,
+				57AAB5A1192E369C0096982F /* MyFavoriteLocationViewController.m in Sources */,
+				57AAB573192BCC180096982F /* GasViewController.m in Sources */,
+				57AD5B101937781800805447 /* RoadsideAssistanceViewController.m in Sources */,
+				57AD5B131937901100805447 /* TireTableViewCell.m in Sources */,
+				5720E208192B96AB00B08D92 /* MyLocationsTableViewController.m in Sources */,
+				57AAB59E192E365F0096982F /* MyOfferViewController.m in Sources */,
+				57AAB551192BAAA00096982F /* MyVehiclesViewController.m in Sources */,
+				57AAB592192BE8C00096982F /* SettingsViewController.m in Sources */,
+				57AAB58F192BE8AF0096982F /* ContactViewController.m in Sources */,
+				57928B0C1935046F007685AA /* MyVehicleInfoViewController.m in Sources */,
+				57AAB5A7192E73160096982F /* MyFavoriteLocationDetailViewController.m in Sources */,
+				57AAB571192BCC180096982F /* ClaimRebateViewController.m in Sources */,
+				57AAB570192BCC180096982F /* AppointViewController.m in Sources */,
+				57AAB57F192BD96B0096982F /* ServiceHistoryViewController.m in Sources */,
+				57AAB572192BCC180096982F /* FindLocationsViewController.m in Sources */,
+				57928B1519365830007685AA /* MyMaintenanceViewController.m in Sources */,
+				57EEB49F192A40B2004A426F /* SWRevealViewController.m in Sources */,
+				57AAB582192BDAD00096982F /* ServiceStatusViewController.m in Sources */,
 				57EEB44E19244D83004A426F /* main.m in Sources */,
+				57928B1B19365C33007685AA /* MyMaintenanceChildViewController.m in Sources */,
+				57AAB575192BCC180096982F /* SearchTiresViewController.m in Sources */,
+				57EEB4AD192A4D01004A426F /* SidebarViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,6 +703,7 @@
 				57EEB47519244D84004A426F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		57EEB47619244D84004A426F /* Build configuration list for PBXNativeTarget "Quick Lane PrototypeTests" */ = {
 			isa = XCConfigurationList;
@@ -470,6 +712,7 @@
 				57EEB47819244D84004A426F /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
