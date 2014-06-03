@@ -16,15 +16,6 @@
 
 @implementation FindLocationsViewController
 
-- (id)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
-{
-    self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
-    if (self) {
-        // Custom initialization
-    }
-    return self;
-}
-
 - (void)viewDidLoad
 {
     [super viewDidLoad];
@@ -42,10 +33,29 @@
     NSDictionary *attributes = [NSDictionary dictionaryWithObjectsAndKeys:
                                 [UIFont boldSystemFontOfSize:11], NSFontAttributeName, nil];
     [_myVehiclesButton setTitleTextAttributes:attributes forState:UIControlStateNormal];
+    
+    // Tap gesture recognizer
+    UITapGestureRecognizer *tapGestureRecognizer = [[UITapGestureRecognizer alloc]
+                                                    initWithTarget:self
+                                                    action:@selector(dismissKeyboard)];
+    [self.view addGestureRecognizer:tapGestureRecognizer];
+}
+
+-(void) dismissKeyboard {
+    [self.searchBar resignFirstResponder];
 }
 
 -(IBAction)pressedOnMyVehicles:(id)sender {
     [self performSegueWithIdentifier:@"myVehiclesSegue" sender:self];
+}
+
+-(void) viewWillDisappear:(BOOL)animated {
+    [super viewWillDisappear:animated];
+    [self.searchBar resignFirstResponder];
+}
+
+-(void)searchBarSearchButtonClicked:(UISearchBar *)searchBar {
+    [self.searchBar resignFirstResponder];
 }
 
 @end

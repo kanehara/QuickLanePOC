@@ -8,11 +8,13 @@
 
 #import <UIKit/UIKit.h>
 
-@interface FindLocationsViewController : UIViewController
+@interface FindLocationsViewController : UIViewController <UISearchBarDelegate>
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *sideBarButton;
 
 @property (weak, nonatomic) IBOutlet UIBarButtonItem *myVehiclesButton;
 -(IBAction)pressedOnMyVehicles:(id)sender;
+
+@property (weak, nonatomic) IBOutlet UISearchBar *searchBar;
 
 @end

@@ -17,5 +17,8 @@
 @property (nonatomic, weak) IBOutlet UIBarButtonItem *myVehiclesButton;
 -(IBAction)pressedOnMyVehicles:(id)sender;
 
+@property (nonatomic, weak) IBOutlet UIButton *searchBySpecsButton;
+-(IBAction)pressedOnSearchBySpecsButton:(id)sender;
+
 
 @end

@@ -40,6 +40,7 @@
 		57AD5B1E1937BFAE00805447 /* otherTire3.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B181937BFAE00805447 /* otherTire3.png */; };
 		57AD5B1F1937BFAE00805447 /* otherTire4.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B191937BFAE00805447 /* otherTire4.png */; };
 		57AD5B201937BFAE00805447 /* recommendedTire.png in Resources */ = {isa = PBXBuildFile; fileRef = 57AD5B1A1937BFAE00805447 /* recommendedTire.png */; };
+		57C9F364193E2F22001C1008 /* SearchByTireSpecsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 57C9F363193E2F22001C1008 /* SearchByTireSpecsViewController.m */; };
 		57EEB44219244D83004A426F /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44119244D83004A426F /* Foundation.framework */; };
 		57EEB44419244D83004A426F /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44319244D83004A426F /* CoreGraphics.framework */; };
 		57EEB44619244D83004A426F /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 57EEB44519244D83004A426F /* UIKit.framework */; };
@@ -122,6 +123,8 @@
 		57AD5B181937BFAE00805447 /* otherTire3.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otherTire3.png; path = "Quick Lane Prototype/My Images/otherTire3.png"; sourceTree = "<group>"; };
 		57AD5B191937BFAE00805447 /* otherTire4.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = otherTire4.png; path = "Quick Lane Prototype/My Images/otherTire4.png"; sourceTree = "<group>"; };
 		57AD5B1A1937BFAE00805447 /* recommendedTire.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = recommendedTire.png; path = "Quick Lane Prototype/My Images/recommendedTire.png"; sourceTree = "<group>"; };
+		57C9F362193E2F22001C1008 /* SearchByTireSpecsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = SearchByTireSpecsViewController.h; path = "Service Controllers/SearchByTireSpecsViewController/SearchByTireSpecsViewController.h"; sourceTree = "<group>"; };
+		57C9F363193E2F22001C1008 /* SearchByTireSpecsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = SearchByTireSpecsViewController.m; path = "Service Controllers/SearchByTireSpecsViewController/SearchByTireSpecsViewController.m"; sourceTree = "<group>"; };
 		57EEB43E19244D83004A426F /* Quick Lane Prototype.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Quick Lane Prototype.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		57EEB44119244D83004A426F /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		57EEB44319244D83004A426F /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -266,6 +269,15 @@
 			name = TireTableViewCell;
 			sourceTree = "<group>";
 		};
+		57C9F365193E2F2D001C1008 /* SearchByTireSpecsViewController */ = {
+			isa = PBXGroup;
+			children = (
+				57C9F362193E2F22001C1008 /* SearchByTireSpecsViewController.h */,
+				57C9F363193E2F22001C1008 /* SearchByTireSpecsViewController.m */,
+			);
+			name = SearchByTireSpecsViewController;
+			sourceTree = "<group>";
+		};
 		57EEB43519244D83004A426F = {
 			isa = PBXGroup;
 			children = (
@@ -352,6 +364,7 @@
 		57EEB48D19264CCD004A426F /* Service Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				57C9F365193E2F2D001C1008 /* SearchByTireSpecsViewController */,
 				57AAB568192BCC180096982F /* FindLocationsViewController.h */,
 				57AAB569192BCC180096982F /* FindLocationsViewController.m */,
 				57AAB56E192BCC180096982F /* SearchTiresViewController.h */,
@@ -506,6 +519,7 @@
 				57AAB570192BCC180096982F /* AppointViewController.m in Sources */,
 				57AAB57F192BD96B0096982F /* ServiceHistoryViewController.m in Sources */,
 				57AAB572192BCC180096982F /* FindLocationsViewController.m in Sources */,
+				57C9F364193E2F22001C1008 /* SearchByTireSpecsViewController.m in Sources */,
 				57928B1519365830007685AA /* MyMaintenanceViewController.m in Sources */,
 				57EEB49F192A40B2004A426F /* SWRevealViewController.m in Sources */,
 				57AAB582192BDAD00096982F /* ServiceStatusViewController.m in Sources */,

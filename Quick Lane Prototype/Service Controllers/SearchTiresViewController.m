@@ -118,4 +118,14 @@
     [self performSegueWithIdentifier:@"myVehiclesSegue" sender:self];
 }
 
+-(IBAction)pressedOnSearchBySpecsButton:(id)sender {
+    [self performSegueWithIdentifier:@"searchBySpecsSegue" sender:self];
+}
+
+-(void) prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
+    if ([[segue identifier] isEqualToString:@"searchBySpecsSegue"]) {
+        [[segue destinationViewController] setTitle: self.searchBySpecsButton.titleLabel.text];
+    }
+}
+
 @end
